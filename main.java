@@ -6,40 +6,40 @@ import java.lang.Math;
 public class main {
 
 	public static void main(String[] args) {
-		System.out.println("Введіть назву операції:");
+		System.out.println("input operation name:");
 		
 		Scanner in = new Scanner(System.in);
 		String operation=in.nextLine();
 		
-		System.out.println("Введіть числа:");
+		System.out.println("input numbers:");
 		double x=in.nextInt();
 		double y=in.nextInt();
 		
 //		System.out.println(operation+" "+x+" "+y);
 		double result=0;
 		switch (operation) {
-		case "додавання":
+		case "addition":
 			System.out.println("x+y="+(x+y));
 			break;
-		case "віднімання":
+		case "subtraction":
 			System.out.println("x-y="+(x-y));
 			break;
-		case "множення":
+		case "multiplication":
 			System.out.println("x*y="+(x*y));
 			break;
-		case "ділення":
+		case "division":
 			System.out.println("x/y="+(x/y));
 			break;
-		case "корінь":
+		case "square root":
 			System.out.println("sqrt(x)="+(Math.sqrt(x)));
 			System.out.println("sqrt(y)="+(Math.sqrt(y)));
 			break;
-		case "модуль":
+		case "module":
 			System.out.println("|x|="+(Math.abs(x)));
 			System.out.println("|y|="+(Math.abs(y)));
 			break;
 		default:
-			System.out.println("назва функції неправильна. Доступні функції: додавання, віднімання, множення, ділення, корінь, модуль");
+			System.out.println("wrong function name. available functions: addition, substraction, multiplication, division, square root, module");
 			break;
 		}
 	}
