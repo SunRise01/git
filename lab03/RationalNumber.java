@@ -82,14 +82,8 @@ public class RationalNumber {
 //ділення двох дробів
 	public static RationalNumber div(RationalNumber first, RationalNumber second){
 		RationalNumber result= new RationalNumber();	
-		//якщо перший дріб більший
-		if (compare(first, second)) {
-			result.numerator=first.numerator*second.denominator;
-			result.denominator=first.denominator*second.numerator;
-		}else {
-			result.numerator=first.denominator*second.numerator;
-			result.denominator=first.numerator*second.denominator;
-		}
+		result.numerator=first.numerator*second.denominator;
+		result.denominator=first.denominator*second.numerator;
 		//скорочення дробу
 		int gcd=gcd(result.numerator, result.denominator);
 		result.numerator/=gcd;
